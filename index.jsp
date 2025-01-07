@@ -39,9 +39,20 @@
                     <a href="forgotPassword.jsp">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
-                <button type="button" class="btn1" onclick="window.location.href='signup.jsp'">SignUp</button>
+
 
             </form>
+        </div>
+        
+        <div class="toggle-box">
+        <div class="toggle-panel">
+        	<h1>Yokasou, Welcome</h1>
+        	<p>Don't have an Account? </p>
+        	 <button type="button" class="btn" onclick="window.location.href='signup.jsp'">Sign Up</button>
+        
+        
+        </div>
+        
         </div>
 
        
