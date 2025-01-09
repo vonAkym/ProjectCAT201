@@ -49,7 +49,7 @@
     <h2><a href="#"><%= email %> <i class="fas fa-user-alt"></i></a></h2>
     <a href="home.jsp" aria-label="Home">Home <i class="fa fa-institution"></i></a>
     <a href="myCart.jsp" aria-label="My Cart">My Cart <i class="fas fa-cart-arrow-down"></i></a>
-    <a href="orders.jsp" aria-label="My Orders">My Orders <i class="fas fa-box"></i></a>
+    <a href="myOrders.jsp" aria-label="My Orders">My Orders <i class="fas fa-box"></i></a>
     <a href="changeDetails.jsp" aria-label="Change Details">Change Details <i class="fas fa-edit"></i></a>
     <a href="messageUs.jsp" aria-label="Message Us">Message Us <i class="fas fa-comment-alt"></i></a>
     <a href="about.jsp" aria-label="About">About <i class="fas fa-info-circle"></i></a>
