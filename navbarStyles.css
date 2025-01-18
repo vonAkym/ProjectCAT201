@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%; /* Make it span the full width of the page */
+    height: auto;
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: 0; /* Remove border-radius to make it fully span the top */
+    position: fixed; /* Fix it to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Add space to prevent content from overlapping with the header */
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+}
+
+.nav_links li {
+    margin: 0 20px;
+    
+}
+
+.nav_links li a {
+    font-weight: 500;
+    font-size: 20px; 
+    color: #edf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: aqua;
+}
+
+button {
+    padding: 9px 25px;
+    background-color:purple;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
