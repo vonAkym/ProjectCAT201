@@ -8,6 +8,8 @@ String city = request.getParameter("city");
 String state = request.getParameter("state");
 String country = request.getParameter("country");
 
+
+
 // Validate email and input parameters
 if (email == null || email.isEmpty() || address == null || city == null || state == null || country == null ||
     address.isEmpty() || city.isEmpty() || state.isEmpty() || country.isEmpty()) {
