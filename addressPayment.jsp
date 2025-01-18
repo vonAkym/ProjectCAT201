@@ -3,12 +3,12 @@
 <%@ include file="footer.jsp" %>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE >
 <html>
 <head>
-<link rel="stylesheet" href="css/addressPaymentForOrder-style.css">
+<link rel="stylesheet" href="css/addresPayment.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<title>Home</title>
+<title>	Proceed Payment</title>
 
 <script> 
 // Disable back button functionality
@@ -32,14 +32,14 @@ try
 	Connection con = project.ConnectionProvider.getCon();
 	Statement st = con.createStatement();
 	ResultSet rsCart= st.executeQuery("select sum(total) from cart where email='"+email+"'and address is NULL");
-	System.out.println("executed");
+	//System.out.println("executed");
 	while(rsCart.next()){
 		total = rsCart.getInt(1);
 	}
 %>
           <tr>
-          <th scope="col"><a href="myCart.jsp"><i class='fas fa-arrow-circle-left'> Back</i></a></th>
-            <th scope="col" style="background-color: yellow;">Total: <i class="fa fa-dollar-sign"></i> <%out.println(total); %></th>
+          <th scope="col"><a href="myCart1.jsp"><i class='fas fa-arrow-circle-left'> Back</i></a></th>
+            <th scope="col" style="background-color: aqua;">Total: RM <i class="fa fa-dollar-sign"></i> <%out.println(total); %></th>
           </tr>
         </thead>
         <thead>
@@ -64,9 +64,13 @@ try
            <td><%= sno %></td> <!-- Displaying the serial number -->
 		    <td><%= rs.getString(2) %></td> <!-- Displaying product name or similar -->
 		    <td><%= rs.getString(3) %></td> <!-- Displaying product category -->
-            <td><i class="fa fa-dollar-sign"></i> <%= rs.getString(4) %></td> <!-- Displaying product price -->
+            <td> RM <i class="fa fa-dollar-sign"></i> <%= rs.getString(4) %></td> <!-- Displaying product price -->
             <td> <%=rs.getString(8) %></td>
-            <td><i class="fa fa-dollar-sign"></i> <%= rs.getString(10) %></td> <!-- Displaying product price -->
+<%
+    double productPrice = Double.parseDouble(rs.getString(10)); // Convert string to double
+    double totalPrice =  Double.parseDouble(rs.getString(8))* productPrice; // Calculate the total price
+%>
+<td> RM <%= String.format("%.2f", totalPrice) %> </td> <!-- Displaying formatted product price -->
             </tr>
          <%
                	}
@@ -107,8 +111,8 @@ try
 </div>
 
 
-<h3 style="color: red">*If there is no address its mean that you did not set you address!</h3>
-<h3 style="color: red">*This address will also updated to your profile</h3>
+<h3 style="color: white">*If there is no address its mean that you did not set you address!</h3>
+<h3 style="color: white">*This address will also updated to your profile</h3>
 <hr style="width: 100%">
 <div class="left-div">
 <h3>Select way of Payment</h3>
@@ -124,7 +128,7 @@ try
 <div class="right-div">
 <h3>Pay online on this maybank.com</h3>
    <input class="input-style" type ="text" name ="transactionId"  placeholder= "Enter Transaction ID" > 
-<h3 style="color: red">*If you select online Payment then enter you transaction ID here otherwise leave this blank</h3>
+<h3 style="color: white">*If you select online Payment then enter you transaction ID here otherwise leave this blank</h3>
 </div>
 <hr style="width: 100%">
 
@@ -133,12 +137,12 @@ try
    <input class="input-style" type ="text" name ="mobileNumber" value="<%=rs2.getString(3) %>" placeholder= "Enter Mobiule Number" required> 
 
 
-<h3 style="color: red">*This mobile number will also updated to your profile</h3>
+<h3 style="color: white">*This mobile number will also updated to your profile</h3>
 </div>
 <div class="right-div">
-<h3 style="color: red">*If you enter wrong transaction id then your order will we can cancel!</h3>
+<h3 style="color: white">*If you enter wrong transaction id then your order will we can cancel!</h3>
 <button class="button">Proceed to Generate Bill & Save <i class='far fa-arrow-alt-circle-right'></i></button>
-<h3 style="color: red">*Fill form correctly</h3>
+<h3 style="color: white">*Fill form correctly</h3>
 </div>
 </form>
 <%
