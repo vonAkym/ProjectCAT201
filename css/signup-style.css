@@ -1,0 +1,116 @@
+body {
+  background-color: #f4f7fb;
+  font: 1em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  width: 840px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whysign, .whysignLogin, .whyforgotPassword {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-basis: 32%;
+  margin-right: 20px;
+}
+
+.whysignLogin {
+  flex-basis: 32%;
+}
+
+.whyforgotPassword {
+  flex-basis: 32%;
+  margin-right: 0;
+}
+
+.signup {
+  width: 300px;
+  padding: 40px 30px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+[type=text], [type=email], [type=number], [type=password], select, option {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 45px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+[type=submit] {
+  margin-top: 20px;
+  width: 90%;
+  height: 50px;
+  background-color: #0080FF;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+[type='text']:focus, [type='email']:focus, [type='password']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+[type=submit]:hover {
+  background-color: #0070d4;
+}
+
+h1 {
+  color: #333;
+  font-weight: 700;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+p {
+  color: #666;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 30px 0;
+}
+
+span {
+  font-size: 0.9em;
+  background-color: #f1f1f1;
+  padding: 3px 6px;
+  color: #555;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 6px;
+  transition: color 0.3s ease;
+}
+
+span:hover {
+  color: #53CACE;
+}
+
+p:nth-of-type(2) {
+  font-size: 1.1em;
+}
