@@ -25,7 +25,7 @@ try (Connection con = project.ConnectionProvider.getCon()) {
         product_total = product_price;
         System.out.println("Product Price: " + product_price);
     } else {
-        response.sendRedirect("home.jsp?msg=invalidProduct");
+        response.sendRedirect("HomeTable.jsp?msg=invalidProduct");
         return;
     }
 
@@ -49,7 +49,7 @@ try (Connection con = project.ConnectionProvider.getCon()) {
         psUpdateCart.setString(3, product_id);
         psUpdateCart.setString(4, email);
         psUpdateCart.executeUpdate();
-        response.sendRedirect("home.jsp?msg=exist");
+        response.sendRedirect("HomeTable.jsp?msg=exist");
         return;
     }
 
@@ -65,10 +65,10 @@ try (Connection con = project.ConnectionProvider.getCon()) {
     System.out.println("Inserting into Cart: " + product_total);
     psInsertCart.executeUpdate();
 
-    response.sendRedirect("home.jsp?msg=added");
+    response.sendRedirect("HomeTable.jsp?msg=added");
 } catch (Exception e) {
     e.printStackTrace();
-    response.sendRedirect("home.jsp?msg=invalid");
+    response.sendRedirect("HomeTable.jsp?msg=invalid");
 }
 %>
 

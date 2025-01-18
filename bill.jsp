@@ -5,7 +5,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="css/bill.css">
+<link rel="stylesheet" href="css/bill1.css">
 <title>Bill</title>
 </head>
 <body>
@@ -36,7 +36,6 @@ try{
 
 <h3>Prime Merchify</h3>
 <hr>
-<div class="left-div"><h3>Name:  <%=rs2.getString(1) %></h3></div>
 <div class="right-div-right"><h3>Email:  <%out.println(email); %></h3></div>
 <div class="right-div"><h3>Mobile Number: <%=rs2.getString(20) %> </h3></div>  
 
@@ -76,15 +75,15 @@ try{
     <td><%  out.println(sno); %></td>
     <td><%= rs1.getString(17) %></td>
     <td><%= rs1.getString(18) %></td>
-    <td><%= rs1.getString(19) %></td>
+    <td>RM <%= rs1.getString(19) %></td>
     <td><%= rs1.getString(3) %></td>
-     <td><%= rs1.getString(5) %></td>
+     <td>RM<%= rs1.getString(5) %></td>
   </tr>
   <tr>
   <%} %>
 
 </table>
-<h3>Total: <%out.println(total); %></h3>
+<h3>Total: RM <%out.println(total); %></h3>
 <a href="continueShopping.jsp"><button class="button left-button">Continue Shopping</button></a>
 <a onclick="window.print();"><button class="button right-button">Print</button></a>
 <br><br><br><br>

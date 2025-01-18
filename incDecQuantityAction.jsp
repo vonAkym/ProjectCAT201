@@ -25,13 +25,13 @@ try
 	}
 	
 	if(quantity == 1 && incdec.equals("dec"))
-		response.sendRedirect("myCart.jsp?msg=notPossible");
+		response.sendRedirect("myCart1.jsp?msg=notPossible");
 	else if(quantity !=1 && incdec.equals("dec"))
 	{
 		total=total-price;
 		quantity -= 1;
 		st.executeUpdate("update cart set total='"+total+"',quantity='"+quantity+"' where email='"+email+"' and product_id='"+id+"' and address is NULL");
-		response.sendRedirect("myCart.jsp?msg=dec");
+		response.sendRedirect("myCart1.jsp?msg=dec");
 	}
 	
 	else{
@@ -39,7 +39,7 @@ try
 		total=total+price;
 		quantity += 1;
 		st.executeUpdate("update cart set total='"+total+"',quantity='"+quantity+"' where email='"+email+"' and product_id='"+id+"' and address is NULL");
-		response.sendRedirect("myCart.jsp?msg=inc");
+		response.sendRedirect("myCart1.jsp?msg=inc");
 	}
 
 }
