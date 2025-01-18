@@ -6,7 +6,7 @@
     <title>Registration Form</title>
     <link rel="icon" type="image/x-icon" href="icons.png"> <!-- Favicon for browser tab -->
     
-    <link rel="stylesheet" href="Signup.css">
+    <link rel="stylesheet" href="Signup1.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="icons.png"> <!-- Favicon for browser tab -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
     <div class="container">
@@ -46,11 +48,9 @@
         
         <div class="toggle-box">
         <div class="toggle-panel">
-        	<h1>Yokasou, Welcome</h1>
+        	<h1>Yokosou, Welcome</h1>
         	<p>Don't have an Account? </p>
         	 <button type="button" class="btn" onclick="window.location.href='signup.jsp'">Sign Up</button>
-        
-        
         </div>
         
         </div>

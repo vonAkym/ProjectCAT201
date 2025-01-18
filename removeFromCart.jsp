@@ -11,7 +11,7 @@ try{
 	Connection con = project.ConnectionProvider.getCon();
 	Statement st = con.createStatement();
 	st.executeUpdate("delete from cart where email='"+email+"' and product_id='"+product_id+"' and address is NULL");
-	response.sendRedirect("myCart.jsp?msg.removed");
+	response.sendRedirect("myCart1.jsp?msg.removed");
 	
 	
 }

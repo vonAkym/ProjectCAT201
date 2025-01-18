@@ -24,7 +24,7 @@ else
 		{	
 			z=1;
 			session.setAttribute("email", email);
-			response.sendRedirect("home.jsp");
+			response.sendRedirect("HomeTable.jsp");
 		}
 		
 		if(z==0)

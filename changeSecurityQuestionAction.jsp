@@ -15,7 +15,7 @@ try{
 			{
 			check = 1;
 			st.executeUpdate("update user set securityQuestion='"+securityQuestion+"', answer='"+newAnswer+"'where email='"+email+"'");
-			response.sendRedirect("changeSecurityQuestion.jsp?=done");
+			response.sendRedirect("changeSecurityQuestion.jsp?msg=done");
 			
 			}
 			if(check==0)
